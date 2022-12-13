@@ -10,23 +10,13 @@ function onElementCreate(event) {
   createBoxes(controlsEl.value);  
 }
  
-// function createBoxes(amount) {
-//   let width = 30;
-//   let height = 30;
-//   let elements = `<div style="background-color: ${getRandomHexColor()};" width="${width}" height="${height}"> </div>`;
-  
-//   for (let i = 1; i < amount; i += 1) {
-//     elements += `<div style="background-color: ${getRandomHexColor()};" width="${width += 10}" height="${height += 10}"> </div>`;
-//   }
-//   boxesEl.insertAdjacentHTML('beforeend', elements);
-// }
-
 function createBoxes(amount) {
   let width = 30;
   let height = 30;
   let elements = `<div style="background-color: ${getRandomHexColor()};" width="${width}" height="${height}"> </div>`;
+  
   for (let i = 1; i < amount; i += 1) {
-    elements += `<div style="background-color: ${getRandomHexColor()}; width='${width += 10}'; height:'${height += 10};'"> </div>`;
+    elements += `<div style="background-color: ${getRandomHexColor()};" width="${width += 10}" height="${height += 10}"> </div>`;
   }
   boxesEl.insertAdjacentHTML('beforeend', elements);
 }
