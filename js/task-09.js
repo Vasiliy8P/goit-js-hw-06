@@ -5,11 +5,14 @@ const bodyEl = document.querySelector('body');
 buttonChangeColorEl.addEventListener('click', onChangeColor)
 
 function onChangeColor(event) {
-  bodyEl.style.backgroundColor = getRandomHexColor();
-  spanColorEl.textContent = getRandomHexColor();
+  const velueBackgroundColor = getRandomHexColor()
+  bodyEl.style.backgroundColor = velueBackgroundColor;
+  spanColorEl.textContent = velueBackgroundColor;
 }
 
-function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+function getRandomHexColor() {  
+  return `#${Math.floor(Math.random() * 16777215)
+    .toString(16)
+    .padStart(6, 0)}`;
 }
 
